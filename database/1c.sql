@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Июл 14 2016 г., 14:59
+-- Время создания: Июл 14 2016 г., 16:44
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=189 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=202 ;
 
 --
 -- Дамп данных таблицы `wp_options`
@@ -267,7 +267,10 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (183, 'acf_version', '4.4.7', 'yes'),
 (186, '_site_transient_timeout_theme_roots', '1468484485', 'yes'),
 (187, '_site_transient_theme_roots', 'a:4:{s:2:"1c";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:14:"twentyfourteen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'yes'),
-(188, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1468482693;s:7:"checked";a:4:{s:2:"1c";s:3:"1.0";s:13:"twentyfifteen";s:3:"1.5";s:14:"twentyfourteen";s:3:"1.7";s:13:"twentysixteen";s:3:"1.1";}s:8:"response";a:1:{s:13:"twentysixteen";a:4:{s:5:"theme";s:13:"twentysixteen";s:11:"new_version";s:3:"1.2";s:3:"url";s:43:"https://wordpress.org/themes/twentysixteen/";s:7:"package";s:59:"https://downloads.wordpress.org/theme/twentysixteen.1.2.zip";}}s:12:"translations";a:0:{}}', 'yes');
+(188, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1468482693;s:7:"checked";a:4:{s:2:"1c";s:3:"1.0";s:13:"twentyfifteen";s:3:"1.5";s:14:"twentyfourteen";s:3:"1.7";s:13:"twentysixteen";s:3:"1.1";}s:8:"response";a:1:{s:13:"twentysixteen";a:4:{s:5:"theme";s:13:"twentysixteen";s:11:"new_version";s:3:"1.2";s:3:"url";s:43:"https://wordpress.org/themes/twentysixteen/";s:7:"package";s:59:"https://downloads.wordpress.org/theme/twentysixteen.1.2.zip";}}s:12:"translations";a:0:{}}', 'yes'),
+(189, '_site_transient_timeout_browser_a4d81b57b1419d428419d6de130c336e', '1469101291', 'yes'),
+(190, '_site_transient_browser_a4d81b57b1419d428419d6de130c336e', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:7:"Firefox";s:7:"version";s:4:"47.0";s:10:"update_url";s:23:"http://www.firefox.com/";s:7:"img_src";s:50:"http://s.wordpress.org/images/browsers/firefox.png";s:11:"img_src_ssl";s:49:"https://wordpress.org/images/browsers/firefox.png";s:15:"current_version";s:2:"16";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes'),
+(192, 'category_children', 'a:0:{}', 'yes');
 
 -- --------------------------------------------------------
 
@@ -283,7 +286,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=104 ;
 
 --
 -- Дамп данных таблицы `wp_postmeta`
@@ -330,11 +333,41 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (40, 25, 'position', 'normal'),
 (41, 25, 'layout', 'no_box'),
 (42, 25, 'hide_on_screen', ''),
-(43, 25, '_edit_lock', '1468488906:1'),
+(43, 25, '_edit_lock', '1468498513:1'),
 (44, 25, 'field_57875c8f4cf35', 'a:11:{s:3:"key";s:19:"field_57875c8f4cf35";s:5:"label";s:16:"Картинка";s:4:"name";s:16:"картинка";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}'),
-(46, 25, 'rule', 'a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"post";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
 (47, 27, '_edit_last', '1'),
-(48, 27, '_edit_lock', '1468489066:1');
+(48, 27, '_edit_lock', '1468489066:1'),
+(49, 25, 'rule', 'a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:6:"slider";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
+(50, 30, '_wp_attached_file', '2016/07/slider-1.png'),
+(51, 30, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:940;s:6:"height";i:330;s:4:"file";s:20:"2016/07/slider-1.png";s:5:"sizes";a:5:{s:9:"thumbnail";a:4:{s:4:"file";s:20:"slider-1-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:20:"slider-1-300x105.png";s:5:"width";i:300;s:6:"height";i:105;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:20:"slider-1-768x270.png";s:5:"width";i:768;s:6:"height";i:270;s:9:"mime-type";s:9:"image/png";}s:14:"post-thumbnail";a:4:{s:4:"file";s:19:"slider-1-220x77.png";s:5:"width";i:220;s:6:"height";i:77;s:9:"mime-type";s:9:"image/png";}s:11:"squareThumb";a:4:{s:4:"file";s:20:"slider-1-292x278.png";s:5:"width";i:292;s:6:"height";i:278;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(52, 31, '_wp_attached_file', '2016/07/slider-2.jpg'),
+(53, 31, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:940;s:6:"height";i:330;s:4:"file";s:20:"2016/07/slider-2.jpg";s:5:"sizes";a:5:{s:9:"thumbnail";a:4:{s:4:"file";s:20:"slider-2-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:20:"slider-2-300x105.jpg";s:5:"width";i:300;s:6:"height";i:105;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:20:"slider-2-768x270.jpg";s:5:"width";i:768;s:6:"height";i:270;s:9:"mime-type";s:10:"image/jpeg";}s:14:"post-thumbnail";a:4:{s:4:"file";s:19:"slider-2-220x77.jpg";s:5:"width";i:220;s:6:"height";i:77;s:9:"mime-type";s:10:"image/jpeg";}s:11:"squareThumb";a:4:{s:4:"file";s:20:"slider-2-292x278.jpg";s:5:"width";i:292;s:6:"height";i:278;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(54, 32, '_wp_attached_file', '2016/07/slider-3.jpg'),
+(55, 32, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:940;s:6:"height";i:330;s:4:"file";s:20:"2016/07/slider-3.jpg";s:5:"sizes";a:5:{s:9:"thumbnail";a:4:{s:4:"file";s:20:"slider-3-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:20:"slider-3-300x105.jpg";s:5:"width";i:300;s:6:"height";i:105;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:20:"slider-3-768x270.jpg";s:5:"width";i:768;s:6:"height";i:270;s:9:"mime-type";s:10:"image/jpeg";}s:14:"post-thumbnail";a:4:{s:4:"file";s:19:"slider-3-220x77.jpg";s:5:"width";i:220;s:6:"height";i:77;s:9:"mime-type";s:10:"image/jpeg";}s:11:"squareThumb";a:4:{s:4:"file";s:20:"slider-3-292x278.jpg";s:5:"width";i:292;s:6:"height";i:278;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(56, 29, '_edit_last', '1'),
+(57, 29, 'картинка', '32'),
+(58, 29, '_картинка', 'field_57875c8f4cf35'),
+(59, 29, '_edit_lock', '1468497024:1'),
+(60, 33, '_edit_last', '1'),
+(61, 33, '_edit_lock', '1468497071:1'),
+(62, 33, 'картинка', '31'),
+(63, 33, '_картинка', 'field_57875c8f4cf35'),
+(64, 34, '_edit_last', '1'),
+(65, 34, '_edit_lock', '1468498142:1'),
+(66, 34, 'картинка', '30'),
+(67, 34, '_картинка', 'field_57875c8f4cf35'),
+(68, 40, '_edit_last', '1'),
+(69, 40, '_edit_lock', '1468498852:1'),
+(72, 35, '_edit_last', '1'),
+(73, 35, '_edit_lock', '1468498857:1'),
+(76, 36, '_edit_last', '1'),
+(77, 36, '_edit_lock', '1468498858:1'),
+(80, 37, '_edit_last', '1'),
+(81, 37, '_edit_lock', '1468498857:1'),
+(84, 38, '_edit_last', '1'),
+(85, 38, '_edit_lock', '1468498857:1'),
+(88, 39, '_edit_last', '1'),
+(89, 39, '_edit_lock', '1468498856:1');
 
 -- --------------------------------------------------------
 
@@ -371,7 +404,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=47 ;
 
 --
 -- Дамп данных таблицы `wp_posts`
@@ -402,9 +435,28 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (22, 1, '2016-07-14 11:00:47', '2016-07-14 08:00:47', '', 'Дополнительные услуги', '', 'inherit', 'closed', 'closed', '', '21-revision-v1', '', '', '2016-07-14 11:00:47', '2016-07-14 08:00:47', '', 21, 'http://1c.loc/2016/07/14/21-revision-v1/', 0, 'revision', '', 0),
 (23, 1, '2016-07-14 11:03:04', '2016-07-14 08:03:04', '', 'Дополнительные услуги', '', 'inherit', 'closed', 'closed', '', '21-autosave-v1', '', '', '2016-07-14 11:03:04', '2016-07-14 08:03:04', '', 21, 'http://1c.loc/2016/07/14/21-autosave-v1/', 0, 'revision', '', 0),
 (24, 1, '2016-07-14 12:31:52', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-07-14 12:31:52', '0000-00-00 00:00:00', '', 0, 'http://1c.loc/?post_type=slider&p=24', 0, 'slider', '', 0),
-(25, 1, '2016-07-14 12:33:53', '2016-07-14 09:33:53', '', 'Слайдер', '', 'publish', 'closed', 'closed', '', 'acf_%d1%81%d0%bb%d0%b0%d0%b9%d0%b4%d0%b5%d1%80', '', '', '2016-07-14 12:37:15', '2016-07-14 09:37:15', '', 0, 'http://1c.loc/?post_type=acf&#038;p=25', 0, 'acf', '', 0),
+(25, 1, '2016-07-14 12:33:53', '2016-07-14 09:33:53', '', 'Слайдер', '', 'publish', 'closed', 'closed', '', 'acf_%d1%81%d0%bb%d0%b0%d0%b9%d0%b4%d0%b5%d1%80', '', '', '2016-07-14 14:50:51', '2016-07-14 11:50:51', '', 0, 'http://1c.loc/?post_type=acf&#038;p=25', 0, 'acf', '', 0),
 (26, 1, '2016-07-14 12:33:57', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-07-14 12:33:57', '0000-00-00 00:00:00', '', 0, 'http://1c.loc/?post_type=acf&p=26', 0, 'acf', '', 0),
-(27, 1, '2016-07-14 12:37:46', '0000-00-00 00:00:00', '', 'Сл', '', 'draft', 'closed', 'closed', '', '', '', '', '2016-07-14 12:37:46', '2016-07-14 09:37:46', '', 0, 'http://1c.loc/?post_type=slider&#038;p=27', 0, 'slider', '', 0);
+(27, 1, '2016-07-14 12:37:46', '0000-00-00 00:00:00', '', 'Сл', '', 'draft', 'closed', 'closed', '', '', '', '', '2016-07-14 12:37:46', '2016-07-14 09:37:46', '', 0, 'http://1c.loc/?post_type=slider&#038;p=27', 0, 'slider', '', 0),
+(28, 1, '2016-07-14 14:49:23', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-07-14 14:49:23', '0000-00-00 00:00:00', '', 0, 'http://1c.loc/?post_type=slider&p=28', 0, 'slider', '', 0),
+(29, 1, '2016-07-14 14:52:27', '2016-07-14 11:52:27', '', 'slider-3', '', 'publish', 'closed', 'closed', '', 'slider-3', '', '', '2016-07-14 14:52:27', '2016-07-14 11:52:27', '', 0, 'http://1c.loc/?post_type=slider&#038;p=29', 0, 'slider', '', 0),
+(30, 1, '2016-07-14 14:51:24', '2016-07-14 11:51:24', '', 'slider-1', '', 'inherit', 'open', 'closed', '', 'slider-1', '', '', '2016-07-14 14:51:24', '2016-07-14 11:51:24', '', 29, 'http://1c.loc/wp-content/uploads/2016/07/slider-1.png', 0, 'attachment', 'image/png', 0),
+(31, 1, '2016-07-14 14:51:26', '2016-07-14 11:51:26', '', 'slider-2', '', 'inherit', 'open', 'closed', '', 'slider-2', '', '', '2016-07-14 14:51:26', '2016-07-14 11:51:26', '', 29, 'http://1c.loc/wp-content/uploads/2016/07/slider-2.jpg', 0, 'attachment', 'image/jpeg', 0),
+(32, 1, '2016-07-14 14:51:28', '2016-07-14 11:51:28', '', 'slider-3', '', 'inherit', 'open', 'closed', '', 'slider-3', '', '', '2016-07-14 14:51:28', '2016-07-14 11:51:28', '', 29, 'http://1c.loc/wp-content/uploads/2016/07/slider-3.jpg', 0, 'attachment', 'image/jpeg', 0),
+(33, 1, '2016-07-14 14:53:15', '2016-07-14 11:53:15', '', 'slider-2', '', 'publish', 'closed', 'closed', '', 'slider-2', '', '', '2016-07-14 14:53:15', '2016-07-14 11:53:15', '', 0, 'http://1c.loc/?post_type=slider&#038;p=33', 0, 'slider', '', 0),
+(34, 1, '2016-07-14 14:53:31', '2016-07-14 11:53:31', '', 'slider-1', '', 'publish', 'closed', 'closed', '', 'slider-1', '', '', '2016-07-14 14:53:31', '2016-07-14 11:53:31', '', 0, 'http://1c.loc/?post_type=slider&#038;p=34', 0, 'slider', '', 0),
+(35, 1, '2016-07-14 15:20:35', '2016-07-14 12:20:35', 'текст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новости', 'текст вашей новости, текст вашей новости, текст вашей новости', '', 'publish', 'open', 'open', '', '%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d0%b2%d0%b0%d1%88%d0%b5%d0%b9-%d0%bd%d0%be%d0%b2%d0%be%d1%81%d1%82%d0%b8-%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d0%b2%d0%b0%d1%88%d0%b5%d0%b9-%d0%bd%d0%be%d0%b2%d0%be%d1%81-2', '', '', '2016-07-14 15:23:01', '2016-07-14 12:23:01', '', 0, 'http://1c.loc/?p=35', 0, 'post', '', 0),
+(36, 1, '2016-07-14 15:20:43', '2016-07-14 12:20:43', 'текст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новости', 'текст вашей новости, текст вашей новости, текст вашей новости', '', 'publish', 'open', 'open', '', '%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d0%b2%d0%b0%d1%88%d0%b5%d0%b9-%d0%bd%d0%be%d0%b2%d0%be%d1%81%d1%82%d0%b8-%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d0%b2%d0%b0%d1%88%d0%b5%d0%b9-%d0%bd%d0%be%d0%b2%d0%be%d1%81-3', '', '', '2016-07-14 15:22:55', '2016-07-14 12:22:55', '', 0, 'http://1c.loc/?p=36', 0, 'post', '', 0),
+(37, 1, '2016-07-14 15:20:51', '2016-07-14 12:20:51', 'текст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новости', 'текст вашей новости, текст вашей новости, текст вашей новости', '', 'publish', 'open', 'open', '', '%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d0%b2%d0%b0%d1%88%d0%b5%d0%b9-%d0%bd%d0%be%d0%b2%d0%be%d1%81%d1%82%d0%b8-%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d0%b2%d0%b0%d1%88%d0%b5%d0%b9-%d0%bd%d0%be%d0%b2%d0%be%d1%81-4', '', '', '2016-07-14 15:22:50', '2016-07-14 12:22:50', '', 0, 'http://1c.loc/?p=37', 0, 'post', '', 0),
+(38, 1, '2016-07-14 15:21:09', '2016-07-14 12:21:09', 'текст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новости', 'текст вашей новости, текст вашей новости, текст вашей новости', '', 'publish', 'open', 'open', '', '%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d0%b2%d0%b0%d1%88%d0%b5%d0%b9-%d0%bd%d0%be%d0%b2%d0%be%d1%81%d1%82%d0%b8-%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d0%b2%d0%b0%d1%88%d0%b5%d0%b9-%d0%bd%d0%be%d0%b2%d0%be%d1%81-5', '', '', '2016-07-14 15:22:43', '2016-07-14 12:22:43', '', 0, 'http://1c.loc/?p=38', 0, 'post', '', 0),
+(39, 1, '2016-07-14 15:21:22', '2016-07-14 12:21:22', 'текст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новости', 'текст вашей новости, текст вашей новости, текст вашей новости', '', 'publish', 'open', 'open', '', '%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d0%b2%d0%b0%d1%88%d0%b5%d0%b9-%d0%bd%d0%be%d0%b2%d0%be%d1%81%d1%82%d0%b8-%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d0%b2%d0%b0%d1%88%d0%b5%d0%b9-%d0%bd%d0%be%d0%b2%d0%be%d1%81-6', '', '', '2016-07-14 15:22:36', '2016-07-14 12:22:36', '', 0, 'http://1c.loc/?p=39', 0, 'post', '', 0),
+(40, 1, '2016-07-14 15:20:25', '2016-07-14 12:20:25', 'текст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новости', 'текст вашей новости, текст вашей новости, текст вашей новости', '', 'publish', 'open', 'open', '', '%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d0%b2%d0%b0%d1%88%d0%b5%d0%b9-%d0%bd%d0%be%d0%b2%d0%be%d1%81%d1%82%d0%b8-%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d0%b2%d0%b0%d1%88%d0%b5%d0%b9-%d0%bd%d0%be%d0%b2%d0%be%d1%81', '', '', '2016-07-14 15:23:05', '2016-07-14 12:23:05', '', 0, 'http://1c.loc/?p=40', 0, 'post', '', 0),
+(41, 1, '2016-07-14 15:20:25', '2016-07-14 12:20:25', 'текст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новости', 'текст вашей новости, текст вашей новости, текст вашей новости', '', 'inherit', 'closed', 'closed', '', '40-revision-v1', '', '', '2016-07-14 15:20:25', '2016-07-14 12:20:25', '', 40, 'http://1c.loc/2016/07/14/40-revision-v1/', 0, 'revision', '', 0),
+(42, 1, '2016-07-14 15:20:35', '2016-07-14 12:20:35', 'текст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новости', 'текст вашей новости, текст вашей новости, текст вашей новости', '', 'inherit', 'closed', 'closed', '', '35-revision-v1', '', '', '2016-07-14 15:20:35', '2016-07-14 12:20:35', '', 35, 'http://1c.loc/2016/07/14/35-revision-v1/', 0, 'revision', '', 0),
+(43, 1, '2016-07-14 15:20:43', '2016-07-14 12:20:43', 'текст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новости', 'текст вашей новости, текст вашей новости, текст вашей новости', '', 'inherit', 'closed', 'closed', '', '36-revision-v1', '', '', '2016-07-14 15:20:43', '2016-07-14 12:20:43', '', 36, 'http://1c.loc/2016/07/14/36-revision-v1/', 0, 'revision', '', 0),
+(44, 1, '2016-07-14 15:20:51', '2016-07-14 12:20:51', 'текст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новости', 'текст вашей новости, текст вашей новости, текст вашей новости', '', 'inherit', 'closed', 'closed', '', '37-revision-v1', '', '', '2016-07-14 15:20:51', '2016-07-14 12:20:51', '', 37, 'http://1c.loc/2016/07/14/37-revision-v1/', 0, 'revision', '', 0),
+(45, 1, '2016-07-14 15:21:09', '2016-07-14 12:21:09', 'текст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новости', 'текст вашей новости, текст вашей новости, текст вашей новости', '', 'inherit', 'closed', 'closed', '', '38-revision-v1', '', '', '2016-07-14 15:21:09', '2016-07-14 12:21:09', '', 38, 'http://1c.loc/2016/07/14/38-revision-v1/', 0, 'revision', '', 0),
+(46, 1, '2016-07-14 15:21:22', '2016-07-14 12:21:22', 'текст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новоститекст вашей новости, текст вашей новости, текст вашей новости', 'текст вашей новости, текст вашей новости, текст вашей новости', '', 'inherit', 'closed', 'closed', '', '39-revision-v1', '', '', '2016-07-14 15:21:22', '2016-07-14 12:21:22', '', 39, 'http://1c.loc/2016/07/14/39-revision-v1/', 0, 'revision', '', 0);
 
 -- --------------------------------------------------------
 
@@ -436,14 +488,15 @@ CREATE TABLE IF NOT EXISTS `wp_terms` (
   PRIMARY KEY (`term_id`),
   KEY `slug` (`slug`(191)),
   KEY `name` (`name`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `wp_terms`
 --
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
-(1, 'Без рубрики', '%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8', 0);
+(1, 'Без рубрики', '%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8', 0),
+(2, 'Новости', '%d0%bd%d0%be%d0%b2%d0%be%d1%81%d1%82%d0%b8', 0);
 
 -- --------------------------------------------------------
 
@@ -464,7 +517,13 @@ CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
 --
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
-(1, 1, 0);
+(1, 1, 0),
+(35, 2, 0),
+(36, 2, 0),
+(37, 2, 0),
+(38, 2, 0),
+(39, 2, 0),
+(40, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -482,14 +541,15 @@ CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   KEY `taxonomy` (`taxonomy`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `wp_term_taxonomy`
 --
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
-(1, 1, 'category', '', 0, 1);
+(1, 1, 'category', '', 0, 1),
+(2, 2, 'category', '', 0, 6);
 
 -- --------------------------------------------------------
 
@@ -525,10 +585,10 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (11, 1, 'wp_user_level', '10'),
 (12, 1, 'dismissed_wp_pointers', ''),
 (13, 1, 'show_welcome_panel', '1'),
-(14, 1, 'session_tokens', 'a:2:{s:64:"3f825023585c227bce7bfb10fd55165b8b22bae3827bfc5582c492dd2f57a94d";a:4:{s:10:"expiration";i:1468568907;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:72:"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0";s:5:"login";i:1468396107;}s:64:"805b9d864607e9dd0a2742da1b56a9be859455070fad9fe7144ce3340b4bd9af";a:4:{s:10:"expiration";i:1468647839;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:72:"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0";s:5:"login";i:1468475039;}}'),
+(14, 1, 'session_tokens', 'a:3:{s:64:"3f825023585c227bce7bfb10fd55165b8b22bae3827bfc5582c492dd2f57a94d";a:4:{s:10:"expiration";i:1468568907;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:72:"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0";s:5:"login";i:1468396107;}s:64:"805b9d864607e9dd0a2742da1b56a9be859455070fad9fe7144ce3340b4bd9af";a:4:{s:10:"expiration";i:1468647839;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:72:"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0";s:5:"login";i:1468475039;}s:64:"57ace277fecfbd5ed1a5dabd6885e60b78a3b0ca3319812c5b81f216b3bd2dd9";a:4:{s:10:"expiration";i:1468669289;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:65:"Mozilla/5.0 (Windows NT 6.1; rv:47.0) Gecko/20100101 Firefox/47.0";s:5:"login";i:1468496489;}}'),
 (15, 1, 'wp_dashboard_quick_press_last_post_id', '3'),
-(16, 1, 'wp_user-settings', 'editor=html'),
-(17, 1, 'wp_user-settings-time', '1468476086');
+(16, 1, 'wp_user-settings', 'editor=html&libraryContent=browse'),
+(17, 1, 'wp_user-settings-time', '1468497143');
 
 -- --------------------------------------------------------
 

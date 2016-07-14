@@ -3,15 +3,26 @@
         <div class="wrapper">
            
             <div id='coin-slider'>
-                <a href="<?php echo get_template_directory_uri(); ?>/img/slider-1.jpg" target="_blank">
-                    <img src='<?php echo get_template_directory_uri(); ?>/img/slider-1.png' >
+
+            <?php wp_reset_query(); ?>
+            <?php $wp_query = new WP_Query(array(
+                'post_type' => 'slider',
+                'post_status' => 'publish',
+                'caller_get_posts'=> 1)
+            ); ?>
+            <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+            <?php $image1 = get_field('картинка'); ?>
+
+                <a href="<?php echo $image1['url']; ?>" target="_blank">
+                    <img src='<?php echo $image1['url']; ?>' >
                 </a>
-                <a href="<?php echo get_template_directory_uri(); ?>/img/slider-2.jpg">
+               <!--  <a href="<?php echo get_template_directory_uri(); ?>/img/slider-2.jpg">
                     <img src='<?php echo get_template_directory_uri(); ?>/img/slider-2.jpg' >
                 </a>
                 <a href="<?php echo get_template_directory_uri(); ?>/img/slider-3.jpg">
                     <img src='<?php echo get_template_directory_uri(); ?>/img/slider-3.jpg' >
-                </a>
+                </a> -->
+                <?php endwhile; ?>
             </div>
             <table>
                 <tbody>
@@ -41,8 +52,20 @@
                     <td class="content_right">
                         <div class="content_right_block">
                             <h3>Новости</h3>
+                            
+                            <?php wp_reset_query(); ?>
+                            <?php $wp_query = new WP_Query(array('cat' => '2')); ?>
+                            <?php $ah_cons = 0; ?>
+                            <?php while (($wp_query->have_posts())&&($ah_cons<5)) : $wp_query->the_post(); ?>
+                            <?php $ah_cons=$ah_cons+1; ?>
                             <div class="right_block_news-item">
-                                <div class="news-item_date">13.01.2102</div>
+                                <div class="news-item_date"><?php the_time('d.m.y'); ?></div>
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            </div>
+                            <?php endwhile; ?>
+<!--                             
+                            <div class="right_block_news-item">
+                                <div class="news-item_date"><?php the_time('d.m.y'); ?></div>
                                 <a href="news.html">текст вашей новости, текст вашей новости, текст вашей новости</a>
                             </div>
                             <div class="right_block_news-item">
@@ -56,11 +79,7 @@
                             <div class="right_block_news-item">
                                 <div class="news-item_date">13.01.2102</div>
                                 <a href="news.html">текст вашей новости, текст вашей новости, текст вашей новости</a>
-                            </div>
-                            <div class="right_block_news-item">
-                                <div class="news-item_date">13.01.2102</div>
-                                <a href="news.html">текст вашей новости, текст вашей новости, текст вашей новости</a>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="content_right_block">
                             <h3>Контакты</h3>
